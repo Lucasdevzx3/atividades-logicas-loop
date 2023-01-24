@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 6</title>
+  </head>
+  <body>
+    <script>
+
+
+            //Desenvolva um algoritmo que leia 10 números, calcule e escreva a
+            //média aritmética dos valores lidos, a quantidade de valores
+            //positivos, a quantidade de valores negativos e o percentual de
+            //valores negativos e positivos.
+            
+      let numbers = [];
+      let sum = 0;
+      let positiveCount = 0;
+      let negativeCount = 0;
+
+      for (let i = 0; i < 10; i++) {
+        let number = parseFloat(prompt("Insira um número:"));
+        numbers.push(number);
+        sum += number;
+        if (number > 0) {
+          positiveCount++;
+        } else if (number < 0) {
+          negativeCount++;
+        }
+      }
+
+      let average = sum / numbers.length;
+      let positivePercentage = (positiveCount / numbers.length) * 100;
+      let negativePercentage = (negativeCount / numbers.length) * 100;
+
+      console.log("Média aritmética: " + average);
+      console.log("Quantidade de valores positivos: " + positiveCount);
+      console.log("Quantidade de valores negativos: " + negativeCount);
+      console.log(
+        "Percentual de valores positivos: " + positivePercentage + "%"
+      );
+      console.log(
+        "Percentual de valores negativos: " + negativePercentage + "%"
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 6</title>
+  </head>
+  <body>
+    <script>
+
+        //Desenvolva um algoritmo que mostre uma contagem regressiva de
+        //30 até 1, marcando os números que forem primos, exatamente
+        //como mostrado abaixo:
+        //30 [29] 28 27 26 25 24 [23] 22 21 20 [19] 18 [17] 16...
+        // A função isPrime verifica se o número é primo ou não. retorna true se o número for primo caso contrário false
+        // via stackoverflow: https://pt.stackoverflow.com/questions/462432/criar-um-algoritmo-em-js-para-listar-todos-os-n%C3%BAmeros-primos-menores-ou-igual
+        
+        function isPrime(num) {
+        if (num <= 1) {
+          return false;
+        }
+        for (let i = 2; i < num; i++) {
+          if (num % i === 0) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      for (let i = 30; i >= 1; i--) {
+        if (isPrime(i)) {
+          console.log(`[${i}]`);
+        } else {
+          console.log(i);
+        }
+      }
+    </script>
+  </body>
+</html>
